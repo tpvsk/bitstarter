@@ -9,7 +9,8 @@ var fs = require("fs");
 buffer.write(fs.readFileSync("index.html", "utf-8"));
 
 app.get('/', function(request, response) {
-  response.send(buffer.toString("utf-8"));
+//  response.send(buffer.toString("utf-8"));
+  response.send("Hello world!");
 });
 
 var port = process.env.PORT || 5000;
